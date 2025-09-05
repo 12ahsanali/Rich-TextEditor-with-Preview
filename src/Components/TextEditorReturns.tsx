@@ -120,7 +120,7 @@ const TextEditor = () => {
   return (
     <div className="relative overflow-hidden flex w-full h-screen p-4 gap-4 bg-gray-200">
       {/* Left: Froala Editor */}
-      <div className="w-[650px] border p-3 bg-white rounded-lg shadow-md">
+      <div className="w-[650px] border h-[600px] p-3 bg-white rounded-lg shadow-md">
         <FroalaEditor
           model={model}
           onModelChange={(content: string) => setModel(content)}
@@ -131,8 +131,8 @@ const TextEditor = () => {
             wordCounterCount: false,
             width: "100%",
             // height: "90%",
-            heightMin: 450,
-            heightMax: 300,
+            heightMin: 250,
+            heightMax: 450,
           }}
         />
       </div>
