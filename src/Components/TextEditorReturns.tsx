@@ -130,8 +130,9 @@ const TextEditor = () => {
             attribution: false,
             wordCounterCount: false,
             width: "100%",
+            // height: "90%",
             heightMin: 450,
-            heightMax: 450,
+            heightMax: 300,
           }}
         />
       </div>
@@ -143,17 +144,18 @@ const TextEditor = () => {
             <div
               key={index}
               className="bg-white shadow-lg border overflow-hidden"
-              style={{ width: `${A4_WIDTH}px`, height: `${A4_HEIGHT}px` }}
+              style={{ width: `${A4_WIDTH}px`, height:"1050px" }}
+              // style={{ width: `${A4_WIDTH}px`, height: `${A4_HEIGHT}px` }}
             >
               <div className="w-full h-full p-10 border border-gray-300">
                 <div
                   dangerouslySetInnerHTML={{ __html: page.join("") }}
                   className="text-black"
                 />
-                <div className="text-center text-xs text-gray-500 mt-4">
+              </div>
+                <div className="text-center text-xs text-gray-500 -mt-6 ">
                   Page {index + 1} of {pages.length}
                 </div>
-              </div>
             </div>
           ))}
         </div>
